@@ -1,0 +1,82 @@
+[
+    {
+        "author_id": 0,
+        "birthplace": "Guinea",
+        "birthyear": 1319,
+        "firstname": "Ronald",
+        "gender:": "male",
+        "lastname": "Thompson"
+    },
+    {
+        "author_id": 1,
+        "birthplace": "Chile",
+        "birthyear": 1598,
+        "firstname": "Claude",
+        "gender:": "male",
+        "lastname": "Hebert"
+    },
+    {
+        "author_id": 2,
+        "birthplace": "Bolivia",
+        "birthyear": 1665,
+        "firstname": "Deborah",
+        "gender:": "female",
+        "lastname": "Renner"
+    },
+    {
+        "author_id": 3,
+        "birthplace": "Botswana",
+        "birthyear": 1435,
+        "firstname": "James",
+        "gender:": "male",
+        "lastname": "Rosales"
+    },
+    {
+        "author_id": 4,
+        "birthplace": "Croatia",
+        "birthyear": 1121,
+        "firstname": "Marie",
+        "gender:": "female",
+        "lastname": "Brazee"
+    },
+    {
+        "author_id": 5,
+        "birthplace": "Sri Lanka",
+        "birthyear": 1310,
+        "firstname": "Brian",
+        "gender:": "male",
+        "lastname": "Sweeney"
+    },
+    {
+        "author_id": 6,
+        "birthplace": "Guam",
+        "birthyear": 1730,
+        "firstname": "Roy",
+        "gender:": "male",
+        "lastname": "Harris"
+    },
+    {
+        "author_id": 7,
+        "birthplace": "Tonga",
+        "birthyear": 1393,
+        "firstname": "Sherry",
+        "gender:": "female",
+        "lastname": "Slaughter"
+    },
+    {
+        "author_id": 8,
+        "birthplace": "Tonga",
+        "birthyear": 1529,
+        "firstname": "Anthony",
+        "gender:": "male",
+        "lastname": "Fasheh"
+    },
+    {
+        "author_id": 9,
+        "birthplace": "Vanuatu",
+        "birthyear": 1123,
+        "firstname": "Judy",
+        "gender:": "female",
+        "lastname": "Laperle"
+    }
+]

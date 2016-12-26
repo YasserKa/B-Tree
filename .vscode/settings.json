@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+{"window.openFilesInNewWindow": false,
+ "window.reopenFolders": "all",
+ "python.pythonPath": "C:\\Python27\\python.exe",
+ "editor.mouseWheelZoom": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "python.linting.pylintPath": "C:\\Python27\\Scripts\\pylint.exe"
+  
+
+}
