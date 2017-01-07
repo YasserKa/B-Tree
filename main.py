@@ -52,21 +52,24 @@ def main():
     [2] Generate a data file for books \n \
     [3] Back\n ")
             command = command_checker(3)
-            while True:
-                try:
-                    size_relation = int(input("State the desired size of the relation: "))
-                    if size_relation < 1:
-                        raise ValueError
-                except ValueError:
-                    print("Not a valid number")
-                else:
-                    break
-            start_time = time.time()
-            if command == 1:
-                rg.author_gen(size_relation)
-            elif command == 2:
-                rg.book_gen(size_relation)
-            print("Execution time: {}".format(time.time() - start_time))
+            if command == 3:
+                user_input()
+            else:
+                while True:
+                    try:
+                        size_relation = int(input("State the desired size of the relation: "))
+                        if size_relation < 1:
+                            raise ValueError
+                    except ValueError:
+                        print("Not a valid number")
+                    else:
+                        break
+                start_time = time.time()
+                if command == 1:
+                    rg.author_gen(size_relation)
+                elif command == 2:
+                    rg.book_gen(size_relation)
+                print("Execution time: {}".format(time.time() - start_time))
 
 
         #commands for building a B+tree
@@ -76,23 +79,26 @@ def main():
     [2] Build a B+-tree file on the book data file \n \
     [3] Back\n ")
             command = command_checker(3)
-            #Gets the desired details for the B+tree
-            while True:
-                try:
-                    print("Enter the desired M and L:\n")
-                    num_pointers = int(input("M (number of pointers):"))
-                    size_bucket = int(input("L (size of the bucket):"))
-                    if num_pointers < 3 or size_bucket < 1:
-                        raise ValueError
-                except ValueError:
-                    print("Not a valid number. Try again...\n")
-                else: break
-            start_time = time.time()
-            if command == 1:
-                tg.btree_gen("authors", size_bucket, num_pointers)
-            elif command == 2:
-                tg.btree_gen("books", size_bucket, num_pointers)
-            print("Execution time: {}".format(time.time() - start_time))
+            if command == 3:
+                user_input()
+            else:
+                #Gets the desired details for the B+tree
+                while True:
+                    try:
+                        print("Enter the desired M and L:\n")
+                        num_pointers = int(input("M (number of pointers):"))
+                        size_bucket = int(input("L (size of the bucket):"))
+                        if num_pointers < 3 or size_bucket < 1:
+                            raise ValueError
+                    except ValueError:
+                        print("Not a valid number. Try again...\n")
+                    else: break
+                start_time = time.time()
+                if command == 1:
+                    tg.btree_gen("authors", size_bucket, num_pointers)
+                elif command == 2:
+                    tg.btree_gen("books", size_bucket, num_pointers)
+                print("Execution time: {}".format(time.time() - start_time))
 
         #commands for a key search
         elif command == 3:
@@ -101,21 +107,24 @@ def main():
     [2] Search inside books\n \
     [3] Back\n ")
             command = command_checker(3)
+            if command == 3:
+                user_input()
+            else:
             #get the desired key
-            while True:
-                try:
-                    key = int(input("Insert your desired key:"))
-                    if key < 0:
-                        raise ValueError
-                except ValueError:
-                    print("Not a valid number. Try again...\n")
-                else: break
+                while True:
+                    try:
+                        key = int(input("Insert your desired key:"))
+                        if key < 0:
+                            raise ValueError
+                    except ValueError:
+                        print("Not a valid number. Try again...\n")
+                    else: break
 
-            if command == 1:
-                ks.search("authors", key)
+                if command == 1:
+                    ks.search("authors", key)
 
-            elif command == 2:
-                ks.search("books", key)
+                elif command == 2:
+                    ks.search("books", key)
 
         elif command == 4:
             start_time = time.time()

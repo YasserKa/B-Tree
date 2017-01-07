@@ -143,7 +143,6 @@ def btree_gen(relation, size_bucket, num_pointers):
                 dict1["K%d" % i] = get_bucket(path)["K%d" % i]
             else:
                 dict1["K%d" % i] = None
-        print("DICT1:", dict1)
         #populating the second node
         for i in range(num_pointers):
             if i < math.ceil(num_pointers/2):
@@ -155,8 +154,6 @@ def btree_gen(relation, size_bucket, num_pointers):
                 dict2["K%d" % i] = get_bucket(path)["K%d" % ((num_pointers//2)+i+1)]
             else:
                 dict2["K%d" % i] = None
-
-        print("DICT1:", dict1, "\nDICT2:", dict2, "\n")
 
         parent_key = get_bucket(path)["K%d" % (num_pointers/2)]
         #overflow in root
@@ -192,7 +189,6 @@ def btree_gen(relation, size_bucket, num_pointers):
     #generating the tree
     for element in id_list:
         insert_in_tree(element)
-        print(tree, "\n")
     with open("Data/btree.{}.json".format(relation), "w") as openf:
         json.dump(tree, openf, sort_keys=True, indent=5, ensure_ascii=False)
         openf.write('\n')
