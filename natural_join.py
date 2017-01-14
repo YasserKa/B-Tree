@@ -36,7 +36,7 @@ def natural_join():
         json.dump(join_json, openf, sort_keys=True, indent=5, ensure_ascii=False)
         openf.write('\n')
 
-natural_join()
+
 
 
 
